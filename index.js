@@ -13,3 +13,11 @@ const render = require("./src/page-template.js");
 
 // TODO: Write Code to gather information about the development team members, and render the HTML file.
 
+
+// Psuedo --
+
+// 1 - Create Employee class -- 
+// 2 - create manager / intern and engineer subclasses from this
+// 3 - outline questions using inquirer defining employees
+// 4 - create new object from eeach 
+// 5 - write file for each object
