@@ -14,10 +14,10 @@ const { type } = require("os");
 const teamArray = [];
 
 function runProgramme() {
-    manager();
+    generateManager();
 
 
-    function manager() {
+    function generateManager() {
         inquirer.prompt([
             {
                 type: "input",
@@ -26,14 +26,33 @@ function runProgramme() {
             },
             {
                 type: 'input',
-                name: 'Manager Employee ID',
-                message: 'What is your managers employee ID?'
+                name: 'managerID',
+                message: 'What is the managers employee ID?'
+            },
+            {
+                type: 'input',
+                name: 'managerEmail',
+                message: 'What is the managers Email?'
+            },
+            {
+                type: 'input',
+                name: 'managerOfficeNumber',
+                message: 'What is the managers employee office number?'
             }
-        ]);
+        ]).then((answer) => {
+            const manager = new Manager(answer.managerName, answer.managerID, answer.managerEmail, answer.managerOfficeNumber);
+            teamArray.push(manager)
+            chooseEmployee();
+        });
     };
+
+    function chooseEmployee() {
+        console.log(teamArray);
+    }
 };
 
 runProgramme();
+
 
 // TODO: Write Code to gather information about the development team members, and render the HTML file.
 
