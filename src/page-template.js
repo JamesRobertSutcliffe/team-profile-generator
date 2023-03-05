@@ -93,7 +93,35 @@ module.exports = team => {
     <title>My Team</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css">
+        <style>
+        body {
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        .employee-card {
+            padding: 5px;
+            margin: 15px;
+            filter: drop-shadow(5px 5px 8px #0f0f11);
+
+        }
+
+        .card-header {
+            background-color: blue;
+            color: white;
+            font-weight: bolder;
+        }
+
+        .team-heading {
+            background-color: rgb(218, 45, 45);
+            color: white;
+            font-weight: bolder;
+        }
+
+        .team-area {
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+    </style>
     <script src="https://kit.fontawesome.com/c502137733.js"></script>
 </head>
 
